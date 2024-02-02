@@ -4,7 +4,7 @@ import logo from "../../utils/logo.png";
 import { useState } from 'react';
 import Button from '../Buttons/Button';
 
-const Header = ({ navLinks }) => {
+const Header = ({ navLinks , activePage }) => {
 
     const [isProductSectionVisible, setProductSectionVisible] = useState(false);
 
@@ -16,9 +16,9 @@ const Header = ({ navLinks }) => {
             <header class="bg-background  border-b-[1px] border-b-text   ">
                 <nav class="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8 " aria-label="Global">
                     <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5     ">
-                        <span class="  text-heading text-primary font-semibold">The Karaikudi Kitchen</span>
-                        <img class="h-8 w-auto sr-only" src={logo} alt="" />
+                    <a href="#" class="-m-1.5 p-1.5 gap-5 ">
+                    <img class="h-10 w-auto " src={logo} alt="" />
+                        {/* <span class=" font-highlight text-heading text-primary font-semibold">The Karaikudi Kitchen</span> */}
                     </a>
                     </div>
                     <div class="flex lg:hidden">
@@ -29,12 +29,12 @@ const Header = ({ navLinks }) => {
                         </svg>
                     </button>
                     </div>
-                    <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="/" class="text-sm font-semibold leading-6 text-gray-900 hover:text-primary">Home</a>
+                    <div class="hidden lg:flex lg:gap-x-12 navs">
+                        <a href="/" className={`text-sm font-semibold leading-6 text-gray-900 hover:text-primary ${activePage === 'home' ? 'active-nav' : ''}`}>Home</a>
 
-                    <a href="/Menu" class="text-sm font-semibold leading-6 text-gray-900 hover:text-primary"> Menu</a>
-                    <a href="/About" class="text-sm font-semibold leading-6 text-gray-900 hover:text-primary">About</a>
-                    <a href="/Contact-us" class="text-sm font-semibold leading-6 text-gray-900 hover:text-primary">Contact</a>
+                        <a href="/Menu" className={`text-sm font-semibold leading-6 text-gray-900 hover:text-primary ${activePage === 'menu' ? 'active-nav' : ''}`}>Menu</a>
+                        <a href="/About" className={`text-sm font-semibold leading-6 text-gray-900 hover:text-primary ${activePage === 'about' ? 'active-nav' : ''}`}>About</a>
+                        <a href="/Contact-us" className={`text-sm font-semibold leading-6 text-gray-900 hover:text-primary ${activePage === 'contact' ? 'active-nav' : ''}`}>Contact</a>
                     </div>
                     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
                     

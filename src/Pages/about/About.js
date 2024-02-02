@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Layout from "../../Layout/index"
 
 const About = () => {
     return (
         <div>
-            About
+            <Layout activePage={"about"}>
+                About
+            </Layout>
         </div>
     )
 }

@@ -3,10 +3,10 @@ import Header from '../Components/TB/Header';
 import Footer from '../Components/TB/Footer';
 import navLinks from '../Functions/navLinks';
 
-const index = ({children }) => {
+const index = ({children ,activePage }) => {
     return (
         <div className=''>
-            <Header navLinks= {navLinks} />
+            <Header navLinks= {navLinks} activePage={activePage} />
                 {children }
             <Footer />
         </div>

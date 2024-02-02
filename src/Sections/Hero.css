@@ -1,0 +1,23 @@
+    .navs > a {
+        color: #333;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+    }
+    
+    .navs > a::after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0;
+        top: 5px;
+        background: transparent;
+        transition: all 0.3s;
+        
+    }
+    
+    .navs > a:hover::after, .navs > a.active-nav::after {
+        width: 100%;
+        background: #D21F3C;
+    }
