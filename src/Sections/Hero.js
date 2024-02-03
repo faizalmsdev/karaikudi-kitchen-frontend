@@ -6,7 +6,7 @@ import { CookingPot , Percent } from '@phosphor-icons/react';
 
 const Hero = () => {
     return (
-        <div className=' hero'>
+        <div className='hero'>
             <Container >
                 <div className='flex mt-10'>
                     <div className='mx-8 my-8  '>
