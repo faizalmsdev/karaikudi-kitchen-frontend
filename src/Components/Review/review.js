@@ -62,7 +62,7 @@
     
 
     return (
-        <div className="rating-box bg-white w-[450px] flex-col ml-10 shadow-lg hover:shadow-inner border-solid">
+        <div className="rating-box bg-white w-[450px] flex-col ml-10 shadow-lg  border-solid">
             {displayThanks ? (
                 <div>Thanks For Your Feedback !</div>
             ) : (

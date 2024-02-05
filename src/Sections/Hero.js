@@ -1,10 +1,16 @@
-import React from 'react';
+import {React , useState} from 'react';
 import Container from "../Layout/Container"
 import './Hero.css';
 import hero from "../images/hero-bg.jpg"
 import { CookingPot , Percent } from '@phosphor-icons/react';
+import ReviewPopup from "../Components/Review/ReviewPopup"
 
 const Hero = () => {
+    const [isReviewPopupOpen, setReviewPopupOpen] = useState(false);
+
+    const openReviewPopup = () => {
+        setReviewPopupOpen(true);
+    };
     return (
         <div className='hero '>
             <Container >
@@ -16,7 +22,7 @@ const Hero = () => {
                             <button className='flex leading-snug text-background gap-2 shadow-lg hover:shadow-inner bg-primary px-4 py-2 rounded-md font-body mt-6'>
                                 Visit Us <CookingPot size={22} />
                             </button>
-                            <button className='flex  gap-2 bg-accent shadow-lg hover:shadow-inner px-4 py-2 rounded-md font-body mt-6'>
+                            <button className='flex  gap-2 bg-accent shadow-lg hover:shadow-inner px-4 py-2 rounded-md font-body mt-6' onClick={openReviewPopup}>
                                 Get Discount <Percent  size={22} />
                             </button>
                         </div>
@@ -26,7 +32,8 @@ const Hero = () => {
                         <img src={hero} alt="hero-img" className='rounded-md'  />
                     </div>
                 </div>
-                
+                {/* Review Popup */}
+        {isReviewPopupOpen && <ReviewPopup setReviewPopupOpen={setReviewPopupOpen}  />}
             </Container>
         </div>
     )
