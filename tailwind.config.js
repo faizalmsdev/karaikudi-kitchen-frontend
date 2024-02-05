@@ -15,10 +15,24 @@ module.exports = {
       primary : '#D21F3C' ,
       secondary : '#E873F9',
       accent : '#F854CE',
-      text:'#030B1B'
+      text:'#030B1B',
+      white:'#f5f5f5',
+      violet: {
+        '500': '#ffcaa6',
+      },
+      purple: {
+        '500': '#f86594',
+      },
     },
-    extend: {},
+    extend: {
+      gradientColorStops: {
+        'slate-900': '#333333',
+        'slate-700': '#555555',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-gradients'),
+  ],
 }
 
