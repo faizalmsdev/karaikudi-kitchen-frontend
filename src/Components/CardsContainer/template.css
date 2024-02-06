@@ -92,3 +92,9 @@
     font-weight: bolder;
 }
 
+
+
+/* template.css */
+.slick-next.slick-arrow::before, .slick-prev.slick-arrow::before {
+    color: red; /* Change arrow color to red */
+}
