@@ -1,0 +1,51 @@
+.about{
+    padding-top:60px;
+    padding-bottom:60px
+}
+.about .abouthead{
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.about .container-size{
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    gap:50px;
+    padding-top:20px
+}
+
+.about .about-left{
+    width:50%;
+}
+
+.about .about-left img{
+    border-radius: 10px 5px;
+}
+
+.about .about-right{
+    width:50%
+}
+
+.about .about-right h4{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.about .about-right h1{
+    padding-top: 30px;
+    color:red ;
+}
+
+
+
+.about .about-right .thirdpartyorders{
+    display: flex;
+    gap:50px;
+    padding-top:25px;
+}
+
+.about .about-right .thirdpartyorders img{
+   
+    height:60px
+}
