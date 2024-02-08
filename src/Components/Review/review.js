@@ -49,7 +49,7 @@
             };
     
             // Make a POST request to the backend API
-            const response = await fetch('http://localhost:3000/api/v1/review', {
+            const response = await fetch('https://karaikudi-kitchen-backend.onrender.com/api/v1/review', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
