@@ -34,11 +34,11 @@
 }
 
 .product-card .cardimg .imgbadges .type{
-    background: rgb(182, 15, 15);
-    padding:5px;
+    /* background: #22aa00; */
+    /* padding:5px;
     position: absolute;
     top:0;
-    
+    width:70px ; */
 }
 
 .product-card .cardimg .imgbadges .type h3{
@@ -80,10 +80,11 @@
 .product-card .order{
     background: rgb(182, 15, 15);
     padding:5px;
-    width:50%;
+    width:29%;
     border-radius: 5px;
     margin-top:10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
 }
 
 .product-card .order h1{
