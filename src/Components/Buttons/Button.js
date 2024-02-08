@@ -47,7 +47,7 @@ const BasicUsage = () => {
                                 <h2 className='font-medium text-xl font-body my-5'><b>Timing:</b>Lunch 12.00 pm to 4.00 pm</h2>
                                 <h2 className='font-medium text-xl font-body my-5'><b>Dinner:</b>7.00 pm to 10.00 pm</h2>
 
-                                <h1 className='font-medium text-xl font-body '><b>044 4260 7475 / 07299909494</b></h1>
+                                <h1 className='font-medium text-xl font-body '><b>7845910410 / 9840450586</b></h1>
 
                                 <p className='font-medium text-xl font-body my-5'>Delivery charges applicable.</p>
 

@@ -29,7 +29,7 @@
         setFeedback(e.target.value);
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         // Check if stars are selected and feedback is provided
         if (activeStars === 0) {
             alert('Please select stars before submitting.');
@@ -41,23 +41,48 @@
             return;
         }
     
-        // If all conditions are met, proceed with submission
-        console.log('Feedback:', feedback);
+        try {
+            // Prepare the review data payload
+            const reviewData = {
+                ratings: activeStars,
+                feedback: feedback.trim()
+            };
     
-        // Hide all elements, including X, and display thanks message
-        setFeedback('');
-        setShowFeedbackBox(false);
-        setActiveStars(0);
-        setDisplayThanks(true);
-        // You may want to show a thank you message here. For example:
-        // setThanksMessage(true);
-        // Set a timeout to hide the thanks message after 2 seconds
-        setTimeout(() => {
-            setDisplayThanks(false);
-            // You can also close the component here if needed
-            setReviewPopupOpen(false);
-        }, 2000);
+            // Make a POST request to the backend API
+            const response = await fetch('http://localhost:3000/api/v1/review', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(reviewData)
+            });
+    
+            // Check if the request was successful
+            if (!response.ok) {
+                throw new Error('Failed to submit review');
+            }
+    
+            // If all conditions are met, proceed with submission
+            // console.log('Feedback:', feedback);
+    
+            // Hide all elements, including X, and display thanks message
+            setFeedback('');
+            setShowFeedbackBox(false);
+            setActiveStars(0);
+            setDisplayThanks(true);
+    
+            // Set a timeout to hide the thanks message after 2 seconds
+            setTimeout(() => {
+                setDisplayThanks(false);
+                // You can also close the component here if needed
+                setReviewPopupOpen(false);
+            }, 2000);
+        } catch (error) {
+            console.error('Error submitting review:', error.message);
+            // You can handle error display or retry logic here
+        }
     };
+    
 
     
 
