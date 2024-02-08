@@ -92,7 +92,7 @@
                                 className='w-[220px] block p-2.5 shadow-lg  text-sm text-text bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-text dark:focus:ring-blue-500 dark:focus:border-blue-500'
                             ></textarea>
                             <div className='mt-3'>
-                                <button onClick={handleSubmit} className='py-2 w-16 px-2 rounded-lg shadow-xl bg-primary hover:shadow-inner text-white'>Submit</button>
+                                <button onClick={handleSubmit} className='py-2 font-medium px-2 rounded-lg shadow-xl bg-primary hover:shadow-inner text-white'>Submit</button>
                             </div>
                         </div>
                     )}
