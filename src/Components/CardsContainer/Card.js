@@ -15,12 +15,13 @@ function Card({
     images
 }) {
     console.log("Dish Name:", dishName); // Adding console log here
+    // console.log(images , "images value")
 
     return (
         <div className='product-card'>
             <div className="cardbody">
                 <div className="cardimg">
-                    <img src={img1} alt="" />
+                    <img src={`https://karaikudi-kitchen-backend.onrender.com/${images}`} alt="" />
                     <div className="imgbadges">
                         <div className={` absolute px-5 h-[32px] flex top-0 p-[5px] type ${vgCategory === 'veg' ? 'bg-[#22aa00]' : 'bg-[#bf360c]'}`}>
                             {/* <img src={veg} width={155} height={10} alt="" /> */}

@@ -4,23 +4,26 @@ import "./template.css";
 
 const CardsContainer = ({ category, data }) => {
     const [categoryData, setCategoryData] = useState([]);
-
+    const baseURL = process.env.REACT_APP_URL;
+    // console.log(baseURL , "base")
     const fetchData = async () => {
         let url;
         switch (category) {
             case 'popular-choice':
-                url = 'https://karaikudi-kitchen-backend.onrender.com/api/v1/menu/popular-choice/';
+                url = `${baseURL}/api/v1/menu/popular-choice/`;
+                console.log(url);
                 break;
             case 'people-favorite':
-                url = 'https://karaikudi-kitchen-backend.onrender.com/api/v1/menu/people-favorite/';
+                url = `${baseURL}/api/v1/menu/people-favorite/`;
+                console.log(url);
                 break;
             case 'high-selling':
-                url = 'https://karaikudi-kitchen-backend.onrender.com/api/v1/menu/high-selling/';
+                url = `${baseURL}/api/v1/menu/high-selling/`;
+                console.log(url);
                 break;
             default:
                 url = ''; // Default to empty string or handle error
         }
-
         try {
             const response = await fetch(url);
             if (response.ok) {
