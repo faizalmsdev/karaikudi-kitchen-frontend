@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from "../Layout/Container";
 import './Hero.css';
 import hero from "../images/hero-bg.jpg";
@@ -7,36 +7,70 @@ import ReviewPopup from "../Components/Review/ReviewPopup";
 
 const Hero = () => {
     const [isReviewPopupOpen, setReviewPopupOpen] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+    
+    useEffect(() => {
+        console.log("Screen width changed:", window.screen.width);
+        if (window.screen.width <= 768) {
+            setIsSmallScreen(true);
+        } else {
+            setIsSmallScreen(false); // Ensure it's false if it's not <= 768
+        }
+    }, [window.screen.width]);
+    
 
     const openReviewPopup = () => {
         setReviewPopupOpen(true);
     };
 
-    return (
-        <div className='hero xl:h-[80vh] xl:w-[80vw] lg:h-[70vh] lg:w-[70vw] flex xl:ml-[10%] justify-center items-center'>
-            <div className='flex'>
-                <div className='mx-4 lg:mx-6 my-6 lg:my-8 py-8 lg:py-10 flex flex-col pl-4 lg:pl-6 gap-4 lg:gap-6 w-full lg:w-[60%]'>
-                <h1 className='text-[#000000]  text-3xl lg:text-4xl lg:text-5xl xl:text-8xl font-heading text-left leading-tight'>Flavors of <span className='text-primary font-design'>Karaikudi</span>, <span className='text-accent font-design'>Delight</span> of Chennai</h1>
-                <p className="font-highlight text-sm lg:text-base lg:text-lg xl:text-4xl font-medium mt-6 leading-snug">From the heart of Karaikudi to the soul of Chennai – discover the magic of KTCJen</p>
-                    <div className='flex gap-3 lg:gap-4 w-[50%]'>
-                        <button className='flex flex-grow items-center leading-snug text-background gap-2  shadow-lg hover:shadow-inner bg-primary px-8 py-4 rounded-lg font-body text-3xl mt-6'>
-                            Visit Us <CookingPot size={32}  className='ml-6'/>
-                        </button>
-                        <button className='flex flex-grow items-center gap-2 bg-accent text-background shadow-lg hover:shadow-inner px-10 py-4 rounded-lg font-body  text-3xl mt-6' onClick={openReviewPopup}>
-                            Get Discount <Percent size={22} />
-                        </button>
+    {console.log(isSmallScreen)};
+    return ( 
+        <div className=''>
+            {isSmallScreen ? (
+                <div className='xl:w-[80%] lg:w-[90%] md:h-[50vh] lg:h-[90vh] md:w-[100%] md:flex-col md:items-center md:justify-center mx-auto flex flex-col lg:flex-row xl:flex-row lg:py-10 ' style={{ backgroundImage: `url(${hero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <div className={`xl:w-[60%] xl:gap-[7%] flex flex-col xl:mr-8 md:justify-center md:items-center w-[100%] glass  md:w-[90%] md:h-[80%]`}>
+                        <h1 className='text-4xl lg:text-4xl xl:text-6xl text-primary text-wrap md:font-bold font-heading  leading-normal md:text-[#f5f5f5] mb-4 md:mr-3'>Flavors of <span className='text-accent md:text-primary'>Karaikudi</span>, <span className='text-accent md:text-primary'>Delight</span> of <span className='md:flex md:justify-center md:items-center md:text-primary'>Chennai</span> </h1>
+                        <p className="text-lg lg:text-xl xl:text-2xl font-medium mb-6 lg:mb-8">From the heart of Karaikudi to the soul of Chennai – discover the magic of KTCJen</p>
+                        <div className='flex gap-4 md:gap-10'>
+                            <a href="/Contact-us">
+                                <button className='flex items-center text-lg lg:text-xl xl:text-2xl bg-primary px-6 py-3 text-background rounded-lg font-medium shadow-lg hover:shadow-inner' >
+                                    Visit Us <CookingPot size={24} className='ml-2'/>
+                                </button>
+                            </a>
+                            
+                            <button className='flex items-center bg-accent  px-8 py-3 rounded-lg font-medium text-lg lg:text-xl xl:text-2xl shadow-lg hover:shadow-inner' onClick={openReviewPopup}>
+                                Get Discount <Percent size={20} className='ml-2'/>
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div className='mt-2 rounded-lg w-[40%] lg:pt-11 lg:pl-7'>
-                    <div className='w-[90%] my-4 lg:my-7 mx-6 lg:mx-10 ml-[10%]'>
-                        <img src={hero} alt="hero-img" className='rounded-lg w-full' loading="lazy" />
+            ) : (
+                <div className='xl:w-[80%] lg:w-[90%] md:h-[50vh] lg:h-[90vh] md:w-[80%] mx-auto flex flex-col lg:flex-row xl:flex-row lg:py-10 '>
+                    <div className='xl:w-[60%] xl:gap-[7%] flex flex-col xl:mr-8 justify-center'>
+                        <h1 className='text-4xl lg:text-4xl xl:text-6xl text-primary font-heading leading-normal mb-4'>Flavors of <span className='text-accent'>Karaikudi</span>, <span className='text-accent'>Delight</span> of Chennai</h1>
+                        <p className="text-lg lg:text-xl xl:text-2xl font-medium mb-6 lg:mb-8">From the heart of Karaikudi to the soul of Chennai – discover the magic of KTCJen</p>
+                        <div className='flex gap-4'>
+                            <a href="/Contact-us">
+                                <button className='flex items-center text-lg lg:text-xl xl:text-2xl bg-primary px-6 py-3 text-background rounded-lg font-medium shadow-lg hover:shadow-inner' >
+                                    Visit Us <CookingPot size={24} className='ml-2'/>
+                                </button>
+                            </a>
+                            
+                            <button className='flex items-center bg-accent  px-8 py-3 rounded-lg font-medium text-lg lg:text-xl xl:text-2xl shadow-lg hover:shadow-inner' onClick={openReviewPopup}>
+                                Get Discount <Percent size={20} className='ml-2'/>
+                            </button>
+                        </div>
+                    </div>
+                    <div className='xl:w-[40%] lg:w-[40%] lg:mt-4 xl:mt-0 xl:ml-12 xl:mb-5 lg:flex lg:justify-center lg:pl-4 md:hidden'>
+                        <div className=' flex items-center'>
+                            <img src={hero} alt="hero-img" className='rounded-lg w-full ' loading="lazy" />
+                        </div>
                     </div>
                 </div>
-            </div>
-    {/* Review Popup */}
-    {isReviewPopupOpen && <ReviewPopup setReviewPopupOpen={setReviewPopupOpen} />}
-</div>
-
+            )}
+            {/* Review Popup */}
+            {isReviewPopupOpen && <ReviewPopup setReviewPopupOpen={setReviewPopupOpen} />}
+        </div>
     );
 };
 

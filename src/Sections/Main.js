@@ -18,7 +18,7 @@ const Main = () => {
                     </div>
                 </div>
                 <div className='absolute top-[1055px]  left-[19%]'>
-                    <OfferPrice />
+                    {/* <OfferPrice /> */}
                 </div>
                 
             </Container>
