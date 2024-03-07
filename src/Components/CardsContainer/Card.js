@@ -27,7 +27,7 @@ function Card({
                         <h3 className={`text-primary font-medium tag  ${vgCategory == "veg" ? "tag--vegetarian" : "tag--non-vegetarian" }`}>{vgCategory}</h3>
                     </div>
                     <div className='mx-2'>
-                        <h2 className="font-medium text-2xl mb-4    ">{dishName}</h2>
+                        <h2 className="font-medium text-2xl mb-4   ">{dishName}</h2>
                         <h3 className="text-xl my-4 ">
                             Price: 
                             <span className="font-medium">

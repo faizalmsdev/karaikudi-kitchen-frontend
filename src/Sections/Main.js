@@ -24,8 +24,8 @@ const Main = ({isSmallScreen}) => {
                 <div className='bg-[#d8ecee] '>
                     <Container>
                         <div className='flex ml-12 '>
-                            <div className='w-[200%] mt-20'>
-                                <img src={img2} width={240} className='rounded-md shadow-lg' />
+                            <div className='w-[200%] my-10'>
+                                <img src={img2}  className='rounded-md shadow-lg w-full' />
                             </div>
                             <div className='mx-12 my-10 '>
                                 <h1 className='lg:text-4xl xl:text-5xl font-design font-semibold leading-snug'>Welcome To <span className='text-primary'>The Karaikudi Kitchen</span> </h1>
