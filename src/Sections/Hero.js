@@ -27,18 +27,18 @@ const Hero = () => {
     return ( 
         <div className=''>
             {isSmallScreen ? (
-                <div className='xl:w-[80%] lg:w-[90%] md:h-[50vh] lg:h-[90vh] md:w-[100%] md:flex-col md:items-center md:justify-center mx-auto flex flex-col lg:flex-row xl:flex-row lg:py-10 ' style={{ backgroundImage: `url(${hero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-                    <div className={`xl:w-[60%] xl:gap-[7%] flex flex-col xl:mr-8 md:justify-center md:items-center w-[100%] glass  md:w-[90%] md:h-[80%]`}>
-                        <h1 className='text-4xl lg:text-4xl xl:text-6xl text-primary text-wrap md:font-bold font-heading  leading-normal md:text-[#f5f5f5] mb-4 md:mr-3'>Flavors of <span className='text-accent md:text-primary'>Karaikudi</span>, <span className='text-accent md:text-primary'>Delight</span> of <span className='md:flex md:justify-center md:items-center md:text-primary'>Chennai</span> </h1>
-                        <p className="text-lg lg:text-xl xl:text-2xl font-medium mb-6 lg:mb-8">From the heart of Karaikudi to the soul of Chennai – discover the magic of KTCJen</p>
-                        <div className='flex gap-4 md:gap-10'>
+                <div className='xl:w-[80%] lg:w-[90%] md:h-[50vh] h-[50vh] lg:h-[90vh]  justify-center items-center md:w-[100%] md:flex-col md:items-center md:justify-center mx-auto flex flex-col lg:flex-row xl:flex-row lg:py-10 ' style={{ backgroundImage: `url(${hero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <div className={`xl:w-[60%] xl:gap-[7%] flex flex-col xl:mr-8 justify-center items-center  glass w-[98%] my-10 md:my-0 h-[45vh]  md:w-[90%] md:h-[80%]`}>
+                        <h1 className='text-xl md:text-4xl lg:text-4xl xl:text-6xl text-primary text-wrap md:font-bold font-heading text-center  leading-normal  mb-4 md:mr-3'>Flavors of <span className='text-primary'>Karaikudi</span>, <span className='text-primary'>Delight</span> of <span className='md:flex md:justify-center md:items-center md:text-primary'>Chennai</span> </h1>
+                        <p className="text-lg lg:text-xl xl:text-2xl font-medium mb-6 lg:mb-8 md:mx-0 text-center mx-4">From the heart of Karaikudi to the soul of Chennai – discover the magic of KTCJen</p>
+                        <div className='flex gap-4 md:gap-10 '>
                             <a href="/Contact-us">
-                                <button className='flex items-center text-lg lg:text-xl xl:text-2xl bg-primary px-6 py-3 text-background rounded-lg font-medium shadow-lg hover:shadow-inner' >
-                                    Visit Us <CookingPot size={24} className='ml-2'/>
+                                <button className='flex items-center text-base lg:text-xl xl:text-2xl bg-primary px-3 py-2 text-background rounded-lg font-medium shadow-lg hover:shadow-inner' >
+                                    Visit Us <CookingPot size={20} className='ml-2'/>
                                 </button>
                             </a>
                             
-                            <button className='flex items-center bg-accent  px-8 py-3 rounded-lg font-medium text-lg lg:text-xl xl:text-2xl shadow-lg hover:shadow-inner' onClick={openReviewPopup}>
+                            <button className='flex items-center bg-accent  px-3 py-2 rounded-lg font-medium text-base lg:text-xl xl:text-2xl shadow-lg hover:shadow-inner' onClick={openReviewPopup}>
                                 Get Discount <Percent size={20} className='ml-2'/>
                             </button>
                         </div>
