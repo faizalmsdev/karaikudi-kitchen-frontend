@@ -10,20 +10,31 @@ const Hero = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     
     useEffect(() => {
-        console.log("Screen width changed:", window.screen.width);
-        if (window.screen.width <= 768) {
-            setIsSmallScreen(true);
-        } else {
-            setIsSmallScreen(false); // Ensure it's false if it's not <= 768
-        }
-    }, [window.screen.width]);
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setIsSmallScreen(true);
+            } else {
+                setIsSmallScreen(false); // Ensure it's false if it's not <= 768
+            }
+        };
+    
+        // Listen to the resize event and call handleResize
+        window.addEventListener('resize', handleResize);
+    
+        // Initial call to set initial screen size
+        handleResize();
+    
+        // Cleanup the event listener when component unmounts
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     
 
     const openReviewPopup = () => {
         setReviewPopupOpen(true);
     };
 
-    {console.log(isSmallScreen)};
     return ( 
         <div className=''>
             {isSmallScreen ? (
