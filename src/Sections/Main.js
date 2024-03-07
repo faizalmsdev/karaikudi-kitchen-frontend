@@ -24,7 +24,7 @@ const Main = ({isSmallScreen}) => {
                 <div className='bg-[#d8ecee] '>
                     <Container>
                         <div className='flex ml-12 '>
-                            <div className='w-[200%] my-10'>
+                            <div className='xl:w-[100%] lg:w-[150%] 2xl:my-10 my-10 lg:my-20'>
                                 <img src={img2}  className='rounded-md shadow-lg w-full' />
                             </div>
                             <div className='mx-12 my-10 '>
