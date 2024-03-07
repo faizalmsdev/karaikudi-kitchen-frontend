@@ -14,39 +14,42 @@ function Card({
     discountPriceAvailable,
     images
 }) {
-    console.log("Dish Name:", dishName); // Adding console log here
+    console.log("Dish Name:", discountPriceAvailable); // Adding console log here
     // console.log(images , "images value")
-    const baseURL = process.env.REACT_APP_URL
-    // console.log(baseURL , "base")
     return (
-        <div className='product-card'>
+        <div className='product-card bg-[#f7f2f2] h-350px w-325px rounded-lg shadow-md relative p-8'>
             <div className="cardbody">
                 <div className="cardimg">
-                    <img src={`${baseURL}/${images}`} alt="" />
-                    <div className="imgbadges">
-                        <div className={` absolute px-5 h-[32px] flex top-0 p-[5px] type ${vgCategory === 'veg' ? 'bg-[#22aa00]' : 'bg-[#bf360c]'}`}>
-                            {/* <img src={veg} width={155} height={10} alt="" /> */}
-                            <h3>{vgCategory}</h3>
-                        </div>
-                        <div className="discount">
-
+                    <img src={images} alt="Product" className="h-200px w-full object-cover shadow-sm" />
+                </div>
+                <div className="Carddescription mt-4 flex flex-col justify-around">
+                    <div className="meal-tags">
+                        <h3 className={`text-primary font-medium tag  ${vgCategory == "veg" ? "tag--vegetarian" : "tag--non-vegetarian" }`}>{vgCategory}</h3>
+                    </div>
+                    <div className='mx-2'>
+                        <h2 className="font-medium text-2xl mb-4    ">{dishName}</h2>
+                        <h3 className="text-xl my-4 ">
+                            Price: 
+                            <span className="font-medium">
+                                {discountPriceAvailable ? (
+                                    <>
+                                        <del className='opacity-55'> {price}</del> {discountPrice} ₹
+                                    </>
+                                ) : (
+                                    `${price} ₹`
+                                )}
+                            </span>
+                        </h3>
+                        <p className='font-light font-heading text-xl my-4'>{description}</p>
+                        <div className="order w-[34%] mb-2">
+                            <a className="text-white font-medium  w-full " href='/Contact-us'>Order now</a>
                         </div>
                     </div>
+                    
                 </div>
-                <div className="Carddescription">
-                    <h2>{dishName}</h2>
-                    <h3>Price: <span class="">{price} Rs/only</span></h3>
-                    <div className="order">
-                        <h1>Order now</h1>
-                    </div>
-
-                </div>
-                <div className="offer">
-                    <h3>55% off</h3>
-                </div>
-
             </div>
         </div>
+
     )
 }
 

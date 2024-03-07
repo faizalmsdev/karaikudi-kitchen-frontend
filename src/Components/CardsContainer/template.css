@@ -1,12 +1,21 @@
 .product-card{
-    background:whitesmoke;
-    height:350px;
+    /* background:; */
+    height:99%;
     width:325px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     position: relative;
     padding:8px
     
+}
+.product-card {
+    /* Your existing styles */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Moves the card up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Increases shadow on hover */
 }
 
 .product-card .cardbody{
@@ -32,6 +41,31 @@
     
     
 }
+.meal-tags {
+    margin-bottom: 1.2rem;
+    display: flex;
+    gap: 0.4rem;
+  }
+  
+  .tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #51cf66;
+    color: #333;
+    border-radius: 100px;
+    font-weight: 600;
+  }
+  
+  .tag--vegetarian {
+    background-color: #51cf66;
+  }
+
+  .tag--non-vegetarian {
+    background-color: orangered;
+    color: #f5f5f5;
+  }
 
 .product-card .cardimg .imgbadges .type{
     /* background: #22aa00; */
@@ -80,7 +114,7 @@
 .product-card .order{
     background: rgb(182, 15, 15);
     padding:5px;
-    width:29%;
+    /* width:29%; */
     border-radius: 5px;
     margin-top:10px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
