@@ -5,26 +5,8 @@ import Main from '../../Sections/Main';
 import MyProducts from '../../Sections/MyProducts';
 import Testimonials from '../../Sections/Testimonials';
 
-const Index = () => {
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (window.innerWidth <= 768) {
-                setIsSmallScreen(true);
-            } else {
-                setIsSmallScreen(false);
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-        handleResize();
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
+const Index = ({isSmallScreen}) => {
+    
     return (
         <Layout activePage={"home"}>
             <div className='bg-white '>
