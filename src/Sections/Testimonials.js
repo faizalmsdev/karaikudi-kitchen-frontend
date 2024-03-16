@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials = () => {
   return (
-    <div className="h-[60vh] pt-4 bg-[#d8ecee] ">
+    <div className="h-[60%] pt-4 bg-[#d8ecee] ">
     <div className='flex flex-col justify-center items-center mt-5'>
     <h1 className='text-center text-3xl font-body font-semibold text-primary'>People's Opinion</h1>
     <p className='text-center mt-4 text-xl font-medium'>Hear What people  are saying about us!</p>

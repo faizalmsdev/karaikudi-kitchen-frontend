@@ -17,7 +17,7 @@ function Card({
     console.log("Dish Name:", discountPriceAvailable); // Adding console log here
     // console.log(images , "images value")
     return (
-        <div className='product-card bg-white h-350px w-325px rounded-lg shadow-md relative p-8'>
+        <div className='product-card bg-white  rounded-lg shadow-md relative p-8'>
             <div className="cardbody">
                 <div className="cardimg">
                     <img src={images} alt="Product" className="h-200px w-full object-cover shadow-sm" />
@@ -41,7 +41,7 @@ function Card({
                             </span>
                         </h3>
                         <p className='font-light font-heading text-xl my-4'>{description}</p>
-                        <div className="order w-[34%] mb-2">
+                        <div className="order w-[39%] mb-2">
                             <a className="text-white font-medium  w-full " href='/Contact-us'>Order now</a>
                         </div>
                     </div>
