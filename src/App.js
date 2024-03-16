@@ -4,6 +4,7 @@ import Home from './Pages/home/index';
 import Contact from './Pages/contactus/Contact';
 import About from './Pages/about/About';
 import Menu from './Pages/menu/Menu';
+import Login from './Pages/Login/Login';
 import { ChakraProvider } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react';
 
@@ -36,6 +37,7 @@ function App() {
         <Route path='/Contact-us' element={ <Contact  isSmallScreen={isSmallScreen}/> } />
         <Route path='/About' element={ <About /> } />
         <Route path='/Menu' element={<Menu />} />
+        <Route path='/log-in' element={<Login /> } />
       </Routes>
       
     </ChakraProvider>
