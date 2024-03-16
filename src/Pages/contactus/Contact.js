@@ -9,7 +9,7 @@ const Contact = ({isSmallScreen}) => {
             <Layout activePage={"contact"}>
                 <Container>
                 {isSmallScreen ? (
-                    <div className='flex flex-col h-[90vh]'>
+                    <div className='flex flex-col h-[50vh]'>
                         <div className="text-5xl text-center flex flex-col font-design font-semibold leading-snug pt-10">
                             <h1 className=''>Contact Us</h1> 
                             <div className="dots flex justify-center mt-2">
@@ -33,7 +33,7 @@ const Contact = ({isSmallScreen}) => {
                                     </p>
                                 </div>
                                 <div className='leading-snug'>       
-                                    <p className="mb-4 flex items-center md:justify-center  leading-snug">
+                                    <p className="mb-4 flex items-center lg:justify-center  leading-snug">
                                         <svg
                                             fill="currentColor"
                                             viewBox="0 0 16 16"
@@ -45,7 +45,7 @@ const Contact = ({isSmallScreen}) => {
                                     </p>
                                 </div>
                                 <div>
-                                    <p className="mb-4 flex items-center md:justify-center  leading-snug">
+                                    <p className="mb-4 flex items-center lg:justify-center  leading-snug">
                                     <svg
                                         viewBox="0 0 24 24"
                                         fill="currentColor"
@@ -58,7 +58,7 @@ const Contact = ({isSmallScreen}) => {
                             </div>
                             <div className=''>
                                 <iframe 
-                                className='lg:w-96 w-60 lg:h-80 h-44 lg:float-right '
+                                className='md:w-96 w-60 md:h-80 h-44 lg:float-right '
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.826827806424!2d80.22728547484446!3d12.918849216033122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d66d28e74a7%3A0xf7c2e1fd4d4c0d2c!2sTHE%20KARAIKUDI%20KITCHEN!5e0!3m2!1sen!2sin!4v1707546023177!5m2!1sen!2sin"
                                 allowfullscreen="" 
                                 loading="lazy" 
@@ -76,7 +76,7 @@ const Contact = ({isSmallScreen}) => {
                                 <span className="dot"></span>
                             </div>
                         </div>
-                        <div className=' flex justify-between  h-[20rem] mb-28 '>
+                        <div className=' flex justify-around  h-[20rem] mb-28 '>
                             <div className='flex flex-col py-10 justify-between'>
                                 <div className='leading-snug'>
                                     <p className="mb-4 flex items-center justify-center md:justify-start leading-snug ">
