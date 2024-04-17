@@ -56,14 +56,7 @@ const Contact = ({isSmallScreen}) => {
                                     </p>
                                 </div>
                             </div>
-                            <div className=''>
-                                <iframe 
-                                className='md:w-96 w-60 md:h-80 h-44 lg:float-right '
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.826827806424!2d80.22728547484446!3d12.918849216033122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d66d28e74a7%3A0xf7c2e1fd4d4c0d2c!2sTHE%20KARAIKUDI%20KITCHEN!5e0!3m2!1sen!2sin!4v1707546023177!5m2!1sen!2sin"
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
+                            
                         </div>
                     </div>
                 ) : (
