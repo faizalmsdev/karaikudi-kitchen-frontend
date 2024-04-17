@@ -18,7 +18,7 @@ const Contact = ({isSmallScreen}) => {
                                 <span className="dot"></span>
                             </div>
                         </div>
-                        <div className=' flex justify-between items-center flex-col h-[20rem] mb-20 mt-10 '>
+                        <div className=' flex justify-between items-center flex-col h-[100%] mb-20 mt-10 '>
                             <div className='flex flex-col items-left py-10 justify-between'>
                                 <div className='leading-snug'>  
                                     <p className="mb-4 flex items-center justify-center md:justify-start leading-snug ">

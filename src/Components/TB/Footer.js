@@ -6,12 +6,12 @@ const Footer = () => {
     return (
        <footer className="bg-background  border-b-[1px] border-b-text">
       <div
-        className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+        className="hidden md:flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
         <div className="mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
                    {/* <!-- Social network icons  --> */}
-        <div className="flex justify-center">
+        <div className=" justify-center hidden md:flex">
           {/* <a className="mr-6 text-neutral-600 dark:text-neutral-200">
             <svg
               xmlns="http://www.w3.org/2000/svg"
