@@ -26,9 +26,9 @@ function Card({
                     <div className="meal-tags">
                         <h3 className={`text-primary font-medium tag  ${vgCategory == "veg" ? "tag--vegetarian" : "tag--non-vegetarian" }`}>{vgCategory}</h3>
                     </div>
-                    <div className='mx-2'>
-                        <h2 className="font-medium text-2xl mb-4   ">{dishName}</h2>
-                        <h3 className="text-xl my-4 ">
+                    <div className='mx-2 h-[200px]'>
+                        <h2 className="font-normal text-base  h-[18%] ">{dishName}</h2>
+                        <h3 className="text-xl my-4 pt-2 ">
                             Price: 
                             <span className="font-medium">
                                 {discountPriceAvailable ? (
@@ -40,7 +40,7 @@ function Card({
                                 )}
                             </span>
                         </h3>
-                        <p className='font-light font-heading text-xl my-4'>{description}</p>
+                        <p className='font-light font-heading text-xl my-4'>{description.length > 21 ? `${description.substring(0, 21)}...` : description}</p>
                         <div className="order w-[39%] mb-2">
                             <a className="text-white font-medium  w-full " href='/Contact-us'>Order now</a>
                         </div>
