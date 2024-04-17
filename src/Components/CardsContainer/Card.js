@@ -17,17 +17,18 @@ function Card({
     console.log("Dish Name:", discountPriceAvailable); // Adding console log here
     // console.log(images , "images value")
     return (
-        <div className='product-card bg-white  rounded-lg shadow-md relative p-8'>
+        <div className='product-card md:h-[99%] md:w-[325px] h-[84%] w-[290px] bg-white  rounded-lg shadow-md relative p-8'>
             <div className="cardbody">
-                <div className="cardimg">
-                    <img src={images} alt="Product" className="h-200px w-full object-cover shadow-sm" />
+                <div className="cardimg md:h-[200px] md:w-[300px] h-[160px] w-[260px]">
+                    <img src={images} alt="Product" className="h-[200px] w-full object-cover shadow-sm" />
                 </div>
                 <div className="Carddescription mt-4 flex flex-col justify-around">
                     <div className="meal-tags">
-                        <h3 className={`text-primary font-medium tag  ${vgCategory == "veg" ? "tag--vegetarian" : "tag--non-vegetarian" }`}>{vgCategory}</h3>
+                        <h3 className={`text-primary font-medium tag md:text-base text-xs md:py-[0.4rem] md:px-[0.8rem] py-[0.2rem] px-[0.6rem]  ${vgCategory == "veg" ? "tag--vegetarian" : "tag--non-vegetarian" }`}>{vgCategory}</h3>
                     </div>
                     <div className='mx-2 h-[200px]'>
-                        <h2 className="font-normal text-base  h-[18%] ">{dishName}</h2>
+                        <h2 className="md:font-normal font-light md:text-[27px] text-[24px]  leading-7 md:h-[18%] h-[10%] ">{dishName}</h2>
+
                         <h3 className="text-xl my-4 pt-2 ">
                             Price: 
                             <span className="font-medium">
@@ -40,7 +41,7 @@ function Card({
                                 )}
                             </span>
                         </h3>
-                        <p className='font-light font-heading text-xl my-4'>{description.length > 21 ? `${description.substring(0, 21)}...` : description}</p>
+                        <p className='font-light font-heading text-xl my-4 md:block hidden'>{description.length > 21 ? `${description.substring(0, 21)}...` : description}</p>
                         <div className="order w-[39%] mb-2">
                             <a className="text-white font-medium  w-full " href='/Contact-us'>Order now</a>
                         </div>
